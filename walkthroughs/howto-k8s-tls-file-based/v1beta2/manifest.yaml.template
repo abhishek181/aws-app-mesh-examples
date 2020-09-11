@@ -159,7 +159,7 @@ metadata:
 spec:
   listeners:
     - portMapping:
-        port: 8080
+        port: 80
         protocol: http
   routes:
     - name: color-route-blue
@@ -212,7 +212,8 @@ metadata:
   namespace: ${APP_NAMESPACE}
 spec:
   ports:
-    - port: 8080
+    - port: 80
+      targetPort: 8080
       name: http
   selector:
     app: front
@@ -250,7 +251,8 @@ metadata:
   namespace: ${APP_NAMESPACE}
 spec:
   ports:
-    - port: 8080
+    - port: 80
+      targetPort: 8080
       name: http
   selector:
     app: color
@@ -291,7 +293,8 @@ metadata:
   namespace: ${APP_NAMESPACE}
 spec:
   ports:
-    - port: 8080
+    - port: 80
+      targetPort: 8080
       name: http
   selector:
     app: color
@@ -332,7 +335,8 @@ metadata:
   namespace: ${APP_NAMESPACE}
 spec:
   ports:
-    - port: 8080
+    - port: 80
+      targetPort: 8080
       name: http
   selector:
     app: color
@@ -371,5 +375,5 @@ metadata:
   namespace: ${APP_NAMESPACE}
 spec:
   ports:
-    - port: 8080
+    - port: 80
       name: http
